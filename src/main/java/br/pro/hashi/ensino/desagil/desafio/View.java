@@ -1,8 +1,6 @@
 package br.pro.hashi.ensino.desagil.desafio;
 
-import br.pro.hashi.ensino.desagil.desafio.model.Board;
-import br.pro.hashi.ensino.desagil.desafio.model.Element;
-import br.pro.hashi.ensino.desagil.desafio.model.Model;
+import br.pro.hashi.ensino.desagil.desafio.model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -71,6 +69,20 @@ public class View extends JPanel {
 
             g.drawImage(image, col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE, this);
         });
+
+        g.setColor(Color.BLACK);
+
+        if (model.getHumanPlayer().getRow() ==  model.getTarget().getRow() && model.getHumanPlayer().getCol() ==  model.getTarget().getCol()){
+            model.getHumanPlayer().incrementPoints();
+            model.chooseRandomTarget();
+        }
+
+        if (model.getCpuPlayer().getRow() ==  model.getTarget().getRow() && model.getCpuPlayer().getCol() ==  model.getTarget().getCol()){
+            model.getCpuPlayer().incrementPoints();
+        }
+
+        g.drawString("Jogador: " + model.getHumanPlayer().getPoints(), 10, 20);
+        g.drawString("Computador: " + model.getCpuPlayer().getPoints(), 10, 40);
 
         // Linha necessária para evitar atrasos
         // de renderização em sistemas Linux.

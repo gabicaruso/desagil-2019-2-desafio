@@ -15,7 +15,7 @@ public abstract class Player extends Element {
     }
 
     public int getPoints() {
-    	return points;
+        return points;
 	}
 
 	public void incrementPoints() {

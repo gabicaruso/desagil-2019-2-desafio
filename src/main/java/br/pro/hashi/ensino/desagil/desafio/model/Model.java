@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Model {
     private final Board board;
-    private Element target;
+    private final Element target;
     private final HumanPlayer humanPlayer;
     private final CpuPlayer cpuPlayer;
 
