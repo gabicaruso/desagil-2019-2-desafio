@@ -1,6 +1,8 @@
 package br.pro.hashi.ensino.desagil.desafio;
 
-import br.pro.hashi.ensino.desagil.desafio.model.*;
+import br.pro.hashi.ensino.desagil.desafio.model.Board;
+import br.pro.hashi.ensino.desagil.desafio.model.Element;
+import br.pro.hashi.ensino.desagil.desafio.model.Model;
 
 import javax.swing.*;
 import java.awt.*;
@@ -72,12 +74,12 @@ public class View extends JPanel {
 
         g.setColor(Color.BLACK);
 
-        if (model.getHumanPlayer().getRow() ==  model.getTarget().getRow() && model.getHumanPlayer().getCol() ==  model.getTarget().getCol()){
+        if (model.getHumanPlayer().getRow() == model.getTarget().getRow() && model.getHumanPlayer().getCol() == model.getTarget().getCol()) {
             model.getHumanPlayer().incrementPoints();
             model.chooseRandomTarget();
         }
 
-        if (model.getCpuPlayer().getRow() ==  model.getTarget().getRow() && model.getCpuPlayer().getCol() ==  model.getTarget().getCol()){
+        if (model.getCpuPlayer().getRow() == model.getTarget().getRow() && model.getCpuPlayer().getCol() == model.getTarget().getCol()) {
             model.getCpuPlayer().incrementPoints();
         }
 

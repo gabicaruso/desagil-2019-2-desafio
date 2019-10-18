@@ -37,16 +37,16 @@ public class Model {
     }
 
     public void chooseRandomTarget() {
-    	int positions[][] = {
-    		{ 2, 2 },
-			{ 2, 16 },
-			{ 6, 16 },
-			{ 8, 6 },
-			{ 6, 6 },
-			{ 4, 14 }
-    	};
-		int randomIndex = new Random().nextInt(positions.length);
-		target.setRow(positions[randomIndex][0]);
-		target.setCol(positions[randomIndex][1]);
-	}
+        int positions[][] = {
+                {2, 2},
+                {2, 16},
+                {6, 16},
+                {8, 6},
+                {6, 6},
+                {4, 14}
+        };
+        int randomIndex = new Random().nextInt(positions.length);
+        target.setRow(positions[randomIndex][0]);
+        target.setCol(positions[randomIndex][1]);
+    }
 }
